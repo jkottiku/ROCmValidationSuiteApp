@@ -125,4 +125,28 @@ SUSE :
     sudo zypper install rocm-validation-suite
 
 
-    
+## Building ROCmValidationSuiteApp from Source
+This section explains how to fetch and compile ROCmValidationSuiteApp source code.
+
+### Clone repository
+
+    git clone https://github.com/jkottiku/ROCmValidationSuiteApp.git
+
+### Configure:
+
+    cd ROCmValidationSuiteApp
+    cmake -B ./build -DROCM_PATH=<rocm_installed_path> -DCMAKE_INSTALL_PREFIX=<rocm_installed_path> -DCPACK_PACKAGING_INSTALL_PREFIX=<rocm_installed_path>
+
+    e.g. If ROCm 5.5 was installed,
+    cmake -B ./build -DROCM_PATH=/opt/rocm-5.5.0 -DCMAKE_INSTALL_PREFIX=/opt/rocm-5.5.0 -DCPACK_PACKAGING_INSTALL_PREFIX=/opt/rocm-5.5.0
+
+### Build binary:
+
+    make -C ./build
+
+## Running ROCmValidationSuiteApp
+
+### Running version built from source code:
+
+    cd ./build/bin
+    ./rvs ; Run all the precomplied tests in ROCmValidationSuiteApp source
