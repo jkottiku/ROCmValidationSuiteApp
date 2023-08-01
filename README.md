@@ -106,11 +106,7 @@ CentOS & RHEL & SUSE :
 
     sudo rpm -i --replacefiles --nodeps rocm-validation-suite*.rpm
 
-**Note:**
-RVS is getting packaged as part of ROCm release starting from 3.0. You can install pre-compiled package as below.
-Please make sure Prerequisites, ROCm stack, rocblas and rocm-smi-lib64 are already installed
-
-## Building ROCmValidationSuiteApp from Source
+## Building ROCmValidationSuiteApp from source
 This section explains how to fetch and compile ROCmValidationSuiteApp source code.
 
 ### Clone repository
