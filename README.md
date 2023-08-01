@@ -34,11 +34,6 @@ SLES :
 
 ## Install ROCm stack, rocblas and rocm-smi-lib
 Install ROCm stack for Ubuntu/CentOS/SLES/RHEL, Refer https://github.com/RadeonOpenCompute/ROCm
-
-_**Note:**_
-
-rocm_smi64 package has been renamed to rocm-smi-lib64 from >= ROCm3.0. If you are using ROCm release < 3.0 , install the package as "rocm_smi64".
-rocm-smi-lib64 package has been renamed to rocm-smi-lib from >= ROCm4.1.
  
 Install rocBLAS and rocm-smi-lib : 
 
@@ -116,10 +111,7 @@ This section explains how to fetch and compile ROCmValidationSuiteApp source cod
 ### Configure:
 
     cd ROCmValidationSuiteApp
-    cmake -B ./build -DROCM_PATH=<rocm_installed_path> -DCMAKE_INSTALL_PREFIX=<rocm_installed_path> -DCPACK_PACKAGING_INSTALL_PREFIX=<rocm_installed_path>
-
-    e.g. If ROCm 5.5 was installed,
-    cmake -B ./build -DROCM_PATH=/opt/rocm-5.5.0 -DCMAKE_INSTALL_PREFIX=/opt/rocm-5.5.0 -DCPACK_PACKAGING_INSTALL_PREFIX=/opt/rocm-5.5.0
+    cmake -B ./build -DROCM_PATH=<rocm_installed_path> -DCMAKE_INSTALL_PREFIX=<rocm_installed_path>
 
 ### Build binary:
 
@@ -130,4 +122,4 @@ This section explains how to fetch and compile ROCmValidationSuiteApp source cod
 ### Running version built from source code:
 
     cd ./build/bin
-    ./rvs ; Run all the precomplied tests in ROCmValidationSuiteApp source
+    ./rvsapp ; Run all the precomplied tests in ROCmValidationSuiteApp
