@@ -30,9 +30,8 @@ if ( ${CMAKE_BINARY_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
 endif ()
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-set ( RVS "rvs" )
+set ( RVS "rvsapp" )
 set ( RVS_PACKAGE "rvs-roct" )
-set ( RVS_COMPONENT "lib${RVS}" )
 set ( RVS_TARGET "${RVS}" )
 
 project ( ${RVS_TARGET} )
